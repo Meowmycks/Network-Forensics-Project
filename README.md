@@ -20,6 +20,7 @@ We were given two packet captures that have information on it we can possibly us
 
 - There's a *lot* of data to sift through. Fortunately, we don't have to. We'll filter for HTTP traffic and see what we find.
 - There's a file called ```pages``` and some cookie data we can steal labeled ```PHPSESSID``` and ```_ga```. These cookies will be useful later.
+- We can export the HTTP file to read its contents now and save the cookie data in another text file for later.
 
 
 ![sharkbite-2](https://user-images.githubusercontent.com/45502375/145147645-5dd3ab7d-5709-433d-9a81-c8349bb0fb85.gif)
