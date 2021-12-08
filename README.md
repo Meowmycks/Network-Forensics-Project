@@ -55,7 +55,7 @@ Let's take a closer look at the request we're sending to the site.
 
 - Using Burp Suite, we can see that there's a new parameter being included in the request called ```codename```
 - From what we know, these members use the names of famous malware as their aliases.
-- Using [this](https://attacksimulator.com/blog/10-famous-malware-examples-in-history/) website, we can guess that the person we're looking for is named "cryptolocker".
+- Using [this](https://attacksimulator.com/blog/10-famous-malware-examples-in-history/) website, we can guess that the person we're looking for is named "cryptolocker" (after guessing a bunch of other names, of course :) ).
 - Therefore, we will send the request to the Repeater and assign ```codename``` the value "cryptolocker" and resend the request.
 
 ![sharkbite-8](https://user-images.githubusercontent.com/45502375/145148799-d2aa51b7-625c-4407-8dc5-e0a431bdad08.gif)
