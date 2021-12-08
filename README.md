@@ -22,6 +22,7 @@ We were given two packet captures that have information on it we can possibly us
 ![sharkbite-2](https://user-images.githubusercontent.com/45502375/145147645-5dd3ab7d-5709-433d-9a81-c8349bb0fb85.gif)
 
 - The file we downloaded contains a long base64 encoded string. Decoding it reveals an RSA private key we can use.
+- We save the key we found into a file with the ```.pfx``` extension. This allows us to use it in Wireshark as an RSA key.
 
 ![sharkbite-3](https://user-images.githubusercontent.com/45502375/145147656-9527763f-6925-49d9-a8f7-1da59e320836.png)
 ![sharkbite-4](https://user-images.githubusercontent.com/45502375/145147662-b3943ded-b688-4892-9843-624b4ed7c4f2.png)
@@ -29,7 +30,8 @@ We were given two packet captures that have information on it we can possibly us
 ### Conversation 2:
 
 - Now that we have an RSA private key, we can decrypt the TLS traffic found in the second packet capture.
-- Upon decryption, we find that another "key" has been revealed.
+- To do that, we go to the TLS protocol settings in Wireshark and add the key file ```sharkbite.pfx``` to the list of RSA keys.
+- Upon successful decryption, we find that another "key" has been revealed.
 - Combining the cookie data we found with the key we found, we are now able to access the website.
 
 ![sharkbite-5](https://user-images.githubusercontent.com/45502375/145147860-4c5e42df-edcd-4e54-bf04-453dcd987f00.gif)
